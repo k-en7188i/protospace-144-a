@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8
+  encoding: encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
@@ -47,6 +47,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+production:
+  <<: *default
+  database: protospace_144_a_production
+  username: protospace_144_a
+  password: <%= ENV['PROTOSPACE_144_A_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   adapter: postgresql
