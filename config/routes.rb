@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root to: "prototypes#index"
-  resources :prototypes, only:  [:index, :new, :create]
+  resources :prototypes, only:  [:index, :new, :create, :show]
 end
