@@ -10,10 +10,10 @@ class PrototypesController < ApplicationController
   def create
     prototype = Prototype.new(prototype_params)
     if prototype.save
-        redirect_to action: :index
+      redirect_to action: :index
     else
-        @prototypes = prototype
-        render :new
+      @prototypes = prototype
+      render :new
     end
   end
 
