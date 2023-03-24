@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
   belongs_to :prototype
-  beloggs_to :user
+  belongs_to :user
 end
