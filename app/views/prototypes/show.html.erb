@@ -5,8 +5,7 @@
         <%= @prototype.title%>
       </p>
       <%= link_to "ここは、ユーザー詳細画面作成後に作るよ！", root_path, class: :prototype__user %>
-      <% if user_signed_in? %>
-      <%# ユーザカラム追加後、追記必要” && current_user.id == @prototype.user_id” %>
+      <% if user_signed_in? && current_user.id == @prototype.user_id %>
         <div class="prototype__manage">
           <%= link_to "編集する", root_path, class: :prototype__btn %>
           <%# <%= link_to '編集', edit_prototype_path(@prototype.id), method: :get  %>
