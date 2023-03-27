@@ -8,6 +8,6 @@ class Prototype < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def was_attached?
-    self.image.attached?
+    image.attached?
   end
 end
