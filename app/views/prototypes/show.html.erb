@@ -14,7 +14,7 @@
       <div class="prototype__image">
 
       <%# 以下のインスタンス変数@prototypeは仮 %>
-        <%= image_tag @prototype.image %>
+        <%= image_tag @prototype.image.variant(resize_to_fill: [420, 300]) %>
       
       </div>
       <div class="prototype__body">
